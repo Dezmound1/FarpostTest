@@ -23,20 +23,20 @@
 
 Bloger
 
-- id: INTEGER, PRIMARY KEY, автоинкрементный.
+- id: INTEGER, PRIMARY KEY.
 - email: EmailField, UNIQUE.
 - login: VARCHAR(50), UNIQUE.
 
 Blog
 
-- id: INTEGER, PRIMARY KEY, автоинкрементный.
+- id: INTEGER, PRIMARY KEY.
 - name: VARCHAR(100).
 - description: VARCHAR(500).
 - owner_id: INTEGER, FOREIGN KEY, ссылается на id в таблице Bloger.
 
 Post
 
-- id: INTEGER, PRIMARY KEY, автоинкрементный.
+- id: INTEGER, PRIMARY KEY.
 - header: VARCHAR(200).
 - text: VARCHAR(2000).
 - author_id: INTEGER, FOREIGN KEY, ссылается на id в таблице Bloger.
@@ -44,7 +44,7 @@ Post
 
 Comment
 
-- id: INTEGER, PRIMARY KEY, автоинкрементный.
+- id: INTEGER, PRIMARY KEY.
 - text: VARCHAR(2000).
 - author_id: INTEGER, FOREIGN KEY, ссылается на id в таблице Bloger.
 - post_id: INTEGER, FOREIGN KEY, ссылается на id в таблице Post.
@@ -57,17 +57,17 @@ Comment
 
 EventType
 
-- id: INTEGER, PRIMARY KEY, автоинкрементный.
+- id: INTEGER, PRIMARY KEY.
 - name: VARCHAR(50).
 
 SpaceType
 
-- id: INTEGER, PRIMARY KEY, автоинкрементный.
+- id: INTEGER, PRIMARY KEY.
 - name: VARCHAR(50).
 
 Logs
 
-- id: INTEGER, PRIMARY KEY, автоинкрементный.
+- id: INTEGER, PRIMARY KEY.
 - datetime: DateTimeField, auto_now_add=True.
 - user_id: INTEGER.
 - space_type_id: INTEGER, FOREIGN KEY, ссылается на id в таблице SpaceType.
@@ -100,7 +100,7 @@ python manage.py mocks_logs -tm
 
 ## Реализация
 
-### Основная логика проекта реализована в модуле dash_app.py
+### Основная логика проекта реализована в модуле `dash_app.py`
 
 [ссылка на модуль](https://github.com/Dezmound1/FarpostTest/blob/main/viewer/blogers/dash_app.py)
 
