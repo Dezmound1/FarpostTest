@@ -80,13 +80,15 @@ Logs
 
 ### Моки для blogers
 
-python manage.py mocks_blogers -tm
+Осуществляются вызовом команды
+`python manage.py mocks_blogers -tm`
 
 [ссылка на моки blogers](https://github.com/Dezmound1/FarpostTest/blob/main/viewer/blogers/management/commands/mocks_users.py)
 
 ### Моки для logs
 
-python manage.py mocks_logs -tm
+Осуществляются вызовом команды
+`python manage.py mocks_logs -tm`
 
 [ссылка на моки logs](https://github.com/Dezmound1/FarpostTest/blob/main/viewer/logs/management/commands/mocks_logs.py)
 
