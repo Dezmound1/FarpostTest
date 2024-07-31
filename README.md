@@ -1,4 +1,4 @@
-# Тестовое задание от Farpost
+# Тестовое задание от FarPost
 
 ## Задача
 
@@ -100,7 +100,7 @@ python manage.py mocks_logs -tm
 
 ## Реализация
 
-### Основная логи проекта реализована в модуле dash_app.py
+### Основная логика проекта реализована в модуле dash_app.py
 
 [ссылка на модуль](https://github.com/Dezmound1/FarpostTest/blob/main/viewer/blogers/dash_app.py)
 
