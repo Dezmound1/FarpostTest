@@ -94,4 +94,19 @@ python manage.py mocks_logs -tm
 
 ### Ссылки на дериктории миграций
 [миграции blogers](https://github.com/Dezmound1/FarpostTest/tree/main/viewer/blogers/migrations)
+
 [миграции logs](https://github.com/Dezmound1/FarpostTest/tree/main/viewer/logs/migrations)
+
+
+## Реализация
+
+### Основная логи проекта реализована в модуле dash_app.py
+
+[ссылка на модуль](https://github.com/Dezmound1/FarpostTest/blob/main/viewer/blogers/dash_app.py)
+
+
+В модуле приведена реализация:
+
+ - основных компонентов app.layout с использованием библиотеки Dash
+ - обращения к базам данных через модели
+ - трансформации данных в необходимый по заданию вид, и внесение их в таблицы с возможностью дальнейшего экспорта в CSV формат

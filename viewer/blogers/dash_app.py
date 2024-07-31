@@ -1,11 +1,11 @@
-from dash import dcc, html, dash_table
+from dash import html, dash_table
 from dash.dependencies import Input, Output, State
 import pandas as pd
 from django_plotly_dash import DjangoDash
 import dash_bootstrap_components as dbc
 from django_loguru.middleware import logger
 
-from .models import Bloger, Blog, Post, Comment
+from .models import Bloger, Post, Comment
 from logs.models import Logs, SpaceType, EventType
 
 dbc_css = "https://cdn.jsdelivr.net/gh/AnnMarieW/dash-bootstrap-templates/dbc.css"
