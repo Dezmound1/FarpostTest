@@ -19,7 +19,7 @@ class Command(BaseCommand):
 
             logger.info("Базовые моки logs созданы")
 
-            for _ in range(26):
+            for _ in range(200):
                 LogsFactory()
             logger.info("Моки logs создались")
         else:

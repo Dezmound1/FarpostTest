@@ -36,5 +36,5 @@ class CommentFactory(DjangoModelFactory):
         model = Comment
 
     text = factory.Faker("paragraph", nb_sentences=5)
-    author_id = factory.LazyFunction(lambda: Bloger.objects.get(id=random.randint(1, 30)))
-    post_id = factory.LazyFunction(lambda: Post.objects.get(id=random.randint(1, 20)))
+    author_id = factory.LazyFunction(lambda: Bloger.objects.get(id=random.randint(1, 50)))
+    post_id = factory.LazyFunction(lambda: Post.objects.get(id=random.randint(1, 40)))

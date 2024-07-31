@@ -14,14 +14,14 @@ data = {
     "User Login": [],
     "Post Header": [],
     "Post Author Login": [],
-    "Number of Comments": [],
+    "Comments Count": [],
 }
 
 data_logs = {
     "Date": [],
-    "Login count": [],
-    "Logout count": [],
-    "Event count inside blog": [],
+    "Login Count": [],
+    "Logout Count": [],
+    "Event Count Inside Blog": [],
 }
 
 df = pd.DataFrame(data)
@@ -138,7 +138,7 @@ def some(n_click, input_field):
                 "User Login": input_field,
                 "Post Header": post_header,
                 "Post Author Login": post_author_login,
-                "Number of Comments": num_comments,
+                "Comments Count": num_comments,
             }
         )
 
@@ -151,9 +151,9 @@ def some(n_click, input_field):
         data_logs.append(
             {
                 "Date": date,
-                "Login count": login_count,
-                "Logout count": logout_count,
-                "Event count inside blog": event_blog_count,
+                "Login Count": login_count,
+                "Logout Count": logout_count,
+                "Event Count Inside Blog": event_blog_count,
             }
         )
 

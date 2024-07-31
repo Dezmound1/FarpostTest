@@ -2,6 +2,8 @@ import factory
 from factory.django import DjangoModelFactory
 from logs.models import Logs, EventType, SpaceType
 from django.utils import timezone
+import random
+from blogers.models import Bloger
 
 spaces = ["global", "blog", "post"]
 events = ["login", "comment", "create_post", "delete_post", "logout"]
@@ -36,7 +38,7 @@ class LogsFactory(DjangoModelFactory):
         model = Logs
 
     datetime = factory.LazyFunction(timezone.now)
-    user_id = factory.Sequence(lambda n: n + 1)
+    user_id = factory.LazyFunction(lambda: Bloger.objects.get(id=random.randint(1, 40)).id)
     space_type_id = factory.SubFactory(SpaceTypeFactory)
     event_type_id = factory.SubFactory(EventTypeFactory)
 

@@ -8,9 +8,9 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         if options["tomock"]:
-            BlogerFactory.create_batch(10)
-            BlogFactory.create_batch(5)
-            PostFactory.create_batch(20)
+            BlogerFactory.create_batch(20)
+            BlogFactory.create_batch(15)
+            PostFactory.create_batch(50)
             CommentFactory.create_batch(200)
             logger.info("Моки users создались")
         else:

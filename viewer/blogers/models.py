@@ -1,5 +1,4 @@
 from django.db import models
-from logs.models import Logs, EventType
 
 
 class Bloger(models.Model):
@@ -8,12 +7,6 @@ class Bloger(models.Model):
 
     class Meta:
         db_table = "users"
-
-    @staticmethod
-    def get_all_posts(login: str):
-        post_user = Post.objects.filter(author_id=Bloger.objects.get(login=login))
-
-        return (Bloger.objects.get(login=login), post_user)
 
 
 class Blog(models.Model):
