@@ -17,16 +17,6 @@
 - PostgreSQL (или другая предпочтительная база данных)
 - Пакеты Python (перечислены в `requirements.txt`)
 
-## Создание моков данных
-
-### Моки для blogers
-
-python manage.py create_mocks_blogers -tm
-
-### Моки для logs
-
-python manage.py create_mocks_logs -tm
-
 ## Схема базы данных
 
 ### Приложение blogers
@@ -84,3 +74,24 @@ Logs
 - event_type_id: INTEGER, FOREIGN KEY, ссылается на id в таблице EventType.
 
 [модели приложения logs](https://github.com/Dezmound1/FarpostTest/blob/main/viewer/logs/models.py)
+
+
+## Создание моков данных
+
+### Моки для blogers
+
+python manage.py mocks_blogers -tm
+
+[ссылка на моки blogers](https://github.com/Dezmound1/FarpostTest/blob/main/viewer/blogers/management/commands/mocks_users.py)
+
+### Моки для logs
+
+python manage.py mocks_logs -tm
+
+[ссылка на моки logs](https://github.com/Dezmound1/FarpostTest/blob/main/viewer/logs/management/commands/mocks_logs.py)
+
+## Миграции приложений
+
+### Ссылки на дериктории миграций
+[миграции blogers](https://github.com/Dezmound1/FarpostTest/tree/main/viewer/blogers/migrations)
+[миграции logs](https://github.com/Dezmound1/FarpostTest/tree/main/viewer/logs/migrations)
