@@ -63,6 +63,7 @@ app.layout = html.Div(
                             width=12,
                         ),
                     ],
+                    className="mb-4",
                 ),
                 dbc.Row(
                     [

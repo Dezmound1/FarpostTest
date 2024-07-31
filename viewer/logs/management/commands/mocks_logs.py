@@ -2,23 +2,34 @@ from django.core.management.base import BaseCommand
 from logs.models import SpaceType, EventType
 from .factory import LogsFactory
 from django_loguru.middleware import logger
+from .factory import spaces, events
 
 
 class Command(BaseCommand):
-    help = "Создание базовых записей для SpaceType и EventType"
+    help = "Создание моков для Logs"
 
     def handle(self, *args, **options):
-        spaces = ["global", "blog", "post"]
-        events = ["login", "comment", "create_post", "delete_post", "logout"]
 
-        for space in spaces:
-            SpaceType.objects.get_or_create(name=space)
+        if options["tomock"]:
+            for space in spaces:
+                SpaceType.objects.get_or_create(name=space)
 
-        for event in events:
-            EventType.objects.get_or_create(name=event)
+            for event in events:
+                EventType.objects.get_or_create(name=event)
 
-        logger.info("Базовые моки logs созданы")
+            logger.info("Базовые моки logs созданы")
 
-        for _ in range(26):
-            LogsFactory()
-        logger.info("Моки logs создались")
+            for _ in range(26):
+                LogsFactory()
+            logger.info("Моки logs создались")
+        else:
+            logger.debug("Такой команды нет")
+
+    def add_arguments(self, parser):
+        parser.add_argument(
+            "-tm",
+            "--tomock",
+            action="store_true",
+            default=False,
+            help="Вызов моков для logs",
+        )
